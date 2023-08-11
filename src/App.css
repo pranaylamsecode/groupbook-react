@@ -1,3 +1,5 @@
 .navbar-expand-lg .navbar-collapse {
-  margin-left: 36em;
+  margin-right: auto;
+  justify-content: flex-end;
+  margin-left: 0;
 }

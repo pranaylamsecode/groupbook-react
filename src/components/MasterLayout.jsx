@@ -5,16 +5,18 @@ import { Footer } from "./Footer";
 import Main from "./Main";
 import AboutSection from "./AboutSection";
 import Cards from "./Cards";
+import Message from "./Message";
 
 const MasterLayout = () => {
   return (
-    <div>
+    <>
       <Header />
       <Main />
       <AboutSection />
       <Cards />
+      <Message />
       <Footer />
-    </div>
+    </>
   );
 };
 

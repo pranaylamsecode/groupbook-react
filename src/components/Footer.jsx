@@ -8,7 +8,7 @@ export const Footer = () => {
         id="footer"
       >
         <div className="py-6 ">
-          <div className="container">z
+          <div className="container">
             <div className="row">
               <div className="col-lg-4 mb-5 mb-lg-0">
                 <div className="fw-bold text-uppercase text-dark mb-3">

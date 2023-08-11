@@ -3,16 +3,16 @@ import React from "react";
 const AboutSection = () => {
   return (
     <>
-      <div class="d-none d-lg-block">
-        <div class="container">
-          <div class="row mt-4">
-            <div class="col">
-              <div class="">
-                <div class="">
-                  <h4 class="mb-3">About this property</h4>
+      <div className="d-none d-lg-block">
+        <div className="container">
+          <div className="row mt-4">
+            <div className="col">
+              <div className="">
+                <div className="">
+                  <h4 className="mb-3">About this property</h4>
                 </div>
                 <p
-                  class="text-sm"
+                  className="text-sm"
                   style={{ maxHeight: "135px", overflow: "hidden" }}
                 >
                   Welcome to the Hampton Inn Miami Beach - Mid Beach, located on
@@ -25,7 +25,7 @@ const AboutSection = () => {
                 </p>
                 <a
                   href="#"
-                  class="text-info text-sm fw-bold"
+                  className="text-info text-sm fw-bold"
                   data-bs-toggle="modal"
                   data-bs-target="#aboutThisPropertyModal"
                 >
@@ -33,39 +33,39 @@ const AboutSection = () => {
                 </a>
               </div>
             </div>
-            <div class="col d-flex justify-content-center">
-              <div class="">
-                <h4 class="mb-3">Popular amenities</h4>
-                <div class="d-flex text-sm mb-0">
-                  <div class="row">
-                    <div class="col-auto">
-                      <ul class="list-unstyled">
-                        <li class="mb-2">
+            <div className="col d-flex justify-content-center">
+              <div className="">
+                <h4 className="mb-3">Popular amenities</h4>
+                <div className="d-flex text-sm mb-0">
+                  <div className="row">
+                    <div className="col-auto">
+                      <ul className="list-unstyled">
+                        <li className="mb-2">
                           <p>Copier</p>
                         </li>
-                        <li class="mb-2">
+                        <li className="mb-2">
                           <p>Printer</p>
                         </li>
-                        <li class="mb-2">
+                        <li className="mb-2">
                           <p>Business center</p>
                         </li>
-                        <li class="mb-2">
+                        <li className="mb-2">
                           <p>Secretarial services</p>
                         </li>
                       </ul>
                     </div>
-                    <div class="col-auto">
-                      <ul class="list-unstyled">
-                        <li class="mb-2">
+                    <div className="col-auto">
+                      <ul className="list-unstyled">
+                        <li className="mb-2">
                           <p>Local calls</p>
                         </li>
-                        <li class="mb-2">
+                        <li className="mb-2">
                           <p>24-hour front desk</p>
                         </li>
-                        <li class="mb-2">
+                        <li className="mb-2">
                           <p>Elevators</p>
                         </li>
-                        <li class="mb-2">
+                        <li className="mb-2">
                           <p>Express check-in</p>
                         </li>
                       </ul>
@@ -75,7 +75,7 @@ const AboutSection = () => {
 
                 <a
                   href="#"
-                  class="text-info text-sm fw-bold"
+                  className="text-info text-sm fw-bold"
                   data-bs-toggle="modal"
                   data-bs-target="#popularAmenitiesModal"
                 >
@@ -85,13 +85,13 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div class="col">
-              <div class="">
-                <h4 class="mb-3">What's nearby</h4>
-                <div class="mb-3">
+            <div className="col">
+              <div className="">
+                <h4 className="mb-3">What&apos;s nearby</h4>
+                <div className="mb-3">
                   <a
                     href="#"
-                    class="text-info text-sm fw-bold"
+                    className="text-info text-sm fw-bold"
                     data-bs-toggle="modal"
                     data-bs-target="#whatsNearbyModal"
                   >
@@ -100,15 +100,15 @@ const AboutSection = () => {
                       width="100%"
                       height="130"
                       style={{ border: 0, borderRadius: "8px" }}
-                      allowfullscreen=""
+                      allowFullScreen=""
                       loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
+                      referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </a>
                 </div>
                 <a
                   href="#"
-                  class="text-info text-sm fw-bold"
+                  className="text-info text-sm fw-bold"
                   data-bs-toggle="modal"
                   data-bs-target="#whatsNearbyModal"
                 >
