@@ -1,6 +1,39 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import axio from "axios";
 const Header = () => {
+  const [token, setToken] = useState("");
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  async function logout() {
+    try {
+      const response = await axio.get(
+        "https://groupbook.getjanhost.dev/APP/public/api/logout",
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Accept: "application/json",
+          },
+        }
+      );
+      if (response) {
+        localStorage.removeItem("token");
+        alert(response.data.message);
+        navigate("/login");
+      }
+    } catch (error) {
+      console.log({ error });
+    }
+  }
+
+  useEffect(() => {
+    const localToken = localStorage.getItem("token");
+    if (localToken) {
+      setToken(localToken);
+    }
+  }, [location.pathname]);
+
   return (
     <>
       <header className="header" id="header">
@@ -60,9 +93,34 @@ const Header = () => {
                 </li>
               </ul>
 
-              <a className="nav-item" href="https://reservemygroup.com/login">
-                Login
-              </a>
+              {!token ? (
+                <a className="nav-item" href="#/login">
+                  Login
+                </a>
+              ) : (
+                <>
+                  <a
+                    className="nav-item"
+                    style={{
+                      color: "green",
+                      backgroundColor: "lightgreen",
+                      padding: "5px 15px",
+                      marginRight: "15px",
+                      borderRadius: "6px",
+                    }}
+                  >
+                    Logged In
+                  </a>
+                  |
+                  <a
+                    className="nav-item"
+                    style={{ color: "red", marginLeft: "5px" }}
+                    onClick={() => logout()}
+                  >
+                    Log out
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </nav>
