@@ -7,17 +7,19 @@ import AboutSection from "./AboutSection";
 import Cards from "./Cards";
 import Message from "./Message";
 import DatePicker from "./DatePicker";
+import PropertyFetch from "./PropertyFetch";
 
 const MasterLayout = () => {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Main />
       <AboutSection />
       <DatePicker />
       <Cards />
       <Message />
-      <Footer />
+      <Footer /> */}
+      <PropertyFetch />
     </>
   );
 };
