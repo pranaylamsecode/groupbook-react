@@ -1,9 +1,41 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 const Main = () => {
+  const [data, setData] = useState(null);
+  const [inputData, setInputData] = useState("");
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(inputData);
+        const jsonData = response.data.data;
+        setData(jsonData);
+      } catch (error) {
+        console.log({ error });
+      }
+    }
+    fetchData();
+  }, [inputData]);
+
+  console.log({ data, inputData });
+
   return (
     <>
       <div className="">
         <div className="container">
           <div className="row">
+            <div className="col mt-6 mb-4">
+              <input
+                type="text"
+                placeholder="Enter the Link..."
+                onChange={(e) => setInputData(e.target.value)}
+              />
+            </div>
+            {data && (
+              <div className="col mt-6 mb-4">{JSON.stringify(data)}</div>
+            )}
+
             <div className="col mt-6 mb-4">
               <h1 className="mb-1 h4" id="hotel_details">
                 Hampton Inn Miami Beach - Mid Beach
